@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Churn Rate Calculation</title>
+</head>
+<body>
+    <h1 align="center">Aswini K V [26011289]</h1>
+    <h2 align="center">Churn Rate Calculator</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label>Initial Customer:</label>
+        <input type="number" name="initial_customer" value="{{InitialCust}}">
+        <br><br>
+
+        <label>Present Customer:</label>
+        <input type="number" name="present_customer" value="{{PresentCust}}">
+        <br><br>
+
+        <input type="submit" value="calculate"><br><br>
+        
+        <label>Churn Rate:</label>
+        <input type="number" value="{{churn}}"><br><br>
+    </form>
+</body>
+</html>
